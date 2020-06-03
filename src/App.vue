@@ -1,7 +1,10 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+    <HelloWorld
+      msg="Welcome to Your Vue.js + TypeScript App"
+      @keyup-enter="onAdd"
+    />
   </div>
 </template>
 
@@ -14,7 +17,11 @@ import HelloWorld from "./components/HelloWorld.vue";
     HelloWorld
   }
 })
-export default class App extends Vue {}
+export default class App extends Vue {
+  onAdd(data) {
+    alert("添加值啦！" + data.name);
+  }
+}
 </script>
 
 <style lang="scss">

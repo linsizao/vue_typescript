@@ -23,9 +23,6 @@
 // console.log(arr);
 // console.log(arrFoo);
 
-
-
-
 // // 函数类型
 // // 参数指定必传参
 // // 可选参数 ?
@@ -36,3 +33,15 @@
 
 // // void 类型
 // function warnUser(): void {}
+
+interface Person {
+  firstName: string;
+  lastName: string
+}
+
+function greetgin2(person: Person) {
+  return "hello "  + person.firstName + " " + person.lastName
+}
+
+const usr = {firstName: 'A', lastName: "b"}
+console.log(greetgin2(usr))
